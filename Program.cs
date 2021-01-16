@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Linq; // Contains helpful methods such as Min, Max, Sum
 
+/* Table of Contents:
+
+Methods   :190
+
+*/
+
 namespace myApp
 {
     class Program
@@ -213,6 +219,24 @@ namespace myApp
             //Named Default
             Huh("child3");
 
+            // Calling overloaded method
+            int myNum1 = PlusMethod(10, 20);
+            double myNum2 = PlusMethod(5.2, 4.5);
+
+            Console.WriteLine($"{myNum1} {myNum2}");
+
+            // Accessing methods
+            Car Ford = new Car("Mustang", "Red", 1969);
+
+
+            Console.WriteLine(Ford.color);
+            Console.WriteLine(Ford.model);
+
+            Ford.fullThrottle();
+
+            Ford.Model = "Focus";
+            Console.WriteLine(Ford.Model);
+
 
         }
 
@@ -256,6 +280,17 @@ namespace myApp
         static void Huh(string child1 = "Liam", string child2 = "Jackson", string child3 = "Joaquin")
         {
             Console.WriteLine(child2);
+        }
+
+        // Method Overloading
+        static int PlusMethod(int x, int y)
+        {
+            return x + y;
+        }
+
+        static double PlusMethod(double x, double y)
+        {
+            return x + y;
         }
 
 
