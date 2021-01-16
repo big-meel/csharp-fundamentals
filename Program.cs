@@ -1,0 +1,196 @@
+﻿using System;
+using System.Linq;
+
+namespace myApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            Console.WriteLine($"Wassup, the time is {DateTime.Now}");
+
+            // Casting
+
+            // Implicit - Smaller to Larger
+            int number = 9;
+            double dub = number;
+
+            Console.WriteLine(number);
+            Console.WriteLine(dub);
+
+            // Explicit - Larger to Smaller
+            double newDub = 9.78;
+            int newNumber = (int) newDub;
+
+            Console.WriteLine(newNumber);
+            Console.WriteLine(newDub);
+
+            // Get User Input
+            // Console.WriteLine("Enter User Name:");
+
+            // string userName = Console.ReadLine();
+
+            // Console.WriteLine("Enter Age: ");
+
+            // int userAge =  Convert.ToInt32(Console.ReadLine());
+
+            // var value = $"You entered: {userName}. \nAge: {userAge} ";
+            // Console.WriteLine(value);
+
+            // Conditionals
+
+            if (20 > 18)
+            {
+                Console.WriteLine("20 is greater than 18");
+            }
+
+            // if... else if... else
+
+            int time = 22;
+
+            if (time < 10)
+            {
+                Console.WriteLine("Good Morning");
+            }
+            else if (time < 20)
+            {
+                Console.WriteLine("Good Day");
+            }
+            else
+            {
+                Console.WriteLine("Good Evening");
+
+            }
+
+            // Terinary
+
+            string result = (time < 18) ? "Good Day" : "Good Evening";
+            Console.WriteLine(result);
+
+            // Switch
+
+            int day = 8;
+
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+                default:
+                    Console.WriteLine("Looking forward to the Weekend.");
+                    break;
+            }
+
+            // While loops
+
+            int i = 0;
+
+            while (i < 5)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+
+            // do/while loop
+
+            i = 0;
+
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            while (i < 5);
+
+            // For loops
+
+            // int i already defined in line 104
+            for (i = 0; i < 10; i += 2)
+            {
+                Console.WriteLine(i);
+            }
+
+            // foreach loop
+
+            string[] cars = { "Volvo", "BMW","Ford", "Mazda" };  // Defines and array of strings (string[]) Note: Curly brackets surround the elements
+
+            foreach (string c in cars)
+            {
+                if (c == "BMW")
+                {
+                    Console.WriteLine("Too Expensive");
+                    continue;  // Skips to next iteration
+                }
+                Console.WriteLine(c);
+            }
+
+            // Access an element in the array
+            Console.WriteLine(cars[1]); // Outputs BMW
+
+            // Change an element in the array
+            cars[0] = "Toyota";
+            Console.WriteLine(cars[0]);  // Outputs Toyota instead of Volvo
+
+            // Sort an  array of strings
+
+            Array.Sort(cars); //Sorts an array by alphabetical order in ascending order
+            foreach (string car in cars)
+            {
+                Console.WriteLine(car);
+            }
+
+            // Sort an array of int
+            int[] myNumbers = {5, 1, 8, 9};
+
+            Array.Sort(myNumbers);// Sorts an array of ints in ascending order
+            foreach (int num in myNumbers)
+            {
+                Console.WriteLine(num);
+            }
+
+            // Min, Max and Sum can be found in the System.Linq namespace
+            Console.WriteLine(myNumbers.Max());
+            Console.WriteLine(myNumbers.Min());
+            Console.WriteLine(myNumbers.Sum());
+
+
+
+            // // Create an array of four elements, and add values later
+            // string[] cars = new string[4];
+
+            // // Create an array of four elements and add values right away 
+            // string[] cars = new string[4] {"Volvo", "BMW", "Ford", "Mazda"};
+
+            // // Create an array of four elements without specifying the size 
+            // string[] cars = new string[] {"Volvo", "BMW", "Ford", "Mazda"};
+
+            // // Create an array of four elements, omitting the new keyword, and without specifying the size
+            // string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+
+            
+            // Methods
+
+            
+        }
+    }
+}
