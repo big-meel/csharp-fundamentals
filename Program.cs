@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Linq; // Contains helpful methods such as Min, Max, Sum
 
 namespace myApp
 {
@@ -190,7 +190,7 @@ namespace myApp
             
             // Methods
 
-            
+
         }
     }
 }
