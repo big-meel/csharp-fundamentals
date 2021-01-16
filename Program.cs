@@ -188,9 +188,76 @@ namespace myApp
 
 
             
-            // Methods
+            // Execute Methods
+            MyMethod();
+            AnotherMethod("Jameel");
+
+            // Default method with argument
+            CountryMethod("Switzerland");
+            // Default method without argument
+            CountryMethod();
+
+            // Multiple Arguments
+            MultipleParams("Jameel", 26);
+
+            // Return values
+            Console.WriteLine(AddFive(10));
+
+            // Or store the result in a variable
+            int newVar = AddFive(20);
+            Console.WriteLine(newVar);
+
+            // Named Arguments - key: value syntax (Order does not matter)
+            SomeNames(child3: "Joseph",child1: "Joshua"  , child2: "Jonah");
+
+            //Named Default
+            Huh("child3");
 
 
         }
+
+        // Define Method
+        static void MyMethod()
+        {
+            Console.WriteLine("Jack In! Execute!");
+        }
+
+        // Defining a Method with parameters
+        static void AnotherMethod(string fname)
+        {
+            Console.WriteLine($"See: {fname}");
+        }
+
+        // Default parameters
+        static void CountryMethod(string country = "Netherlands")
+        {
+            Console.WriteLine($"Some day I'm moving to {country}");
+        }
+
+        // Multiple parameters
+        static void MultipleParams(string aName, int aNumber)
+        {
+            Console.WriteLine($"{aName}, {aNumber}");
+        }
+
+        // Return values
+        static int AddFive(int aNum)
+        {
+            return aNum + 5;
+        }
+
+        // Named Arguments example
+        static void SomeNames(string child1, string child2, string child3)
+        {
+            Console.WriteLine($"The youngest child is: { child3 }");
+        }
+
+        // Named Defaults
+        static void Huh(string child1 = "Liam", string child2 = "Jackson", string child3 = "Joaquin")
+        {
+            Console.WriteLine(child2);
+        }
+
+
     }
 }
