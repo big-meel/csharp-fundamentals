@@ -4,6 +4,7 @@ using System.Linq; // Contains helpful methods such as Min, Max, Sum
 /* Table of Contents:
 
 Methods   :190
+Classes and Objects :241
 
 */
 
@@ -237,6 +238,23 @@ namespace myApp
             Ford.Model = "Focus";
             Console.WriteLine(Ford.Model);
 
+            // Calling inherited classes (See: Animal.cs)
+
+            Animal myAnimal = new Animal();  // create animal object
+            Animal myPig = new Pig(); //create pig object
+            Animal myDog = new Dog(); // create dog object(
+
+            Pig newPig = new Pig(); // Note: Creating from the derived class will yield correct result should override keyword not be used
+
+
+            myAnimal.animalSound();
+            myPig.animalSound();
+            myDog.animalSound();
+            newPig.animalSound();
+
+
+            // Calling Abstract classes
+            AbPig thatPig = new AbPig();
 
         }
 
