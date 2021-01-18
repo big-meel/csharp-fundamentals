@@ -261,9 +261,20 @@ namespace myApp
             Dragon myDragon = new Dragon(); // Create a dragon object
             myDragon.animalSound();
             myDragon.breatheFire();
+            
+            //Calling enum value
+
+            Months month = Months.January;
+            int monthOfTheYear = (int) Months.January;
+            
+            Console.WriteLine(month);
+            Console.WriteLine(monthOfTheYear);
+
+
 
         }
 
+           
         // Define Method
         static void MyMethod()
         {
@@ -315,6 +326,15 @@ namespace myApp
         static double PlusMethod(double x, double y)
         {
             return x + y;
+        }
+
+         // Enum Examples
+
+        enum Months
+        {
+            January = 1, // enum defaults to 0,1,2,3... unless specified
+            Fenruary, // by default enum will increment from the previous value
+            March
         }
 
 
