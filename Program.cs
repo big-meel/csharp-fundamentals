@@ -256,6 +256,12 @@ namespace myApp
             // Calling Abstract classes
             AbPig thatPig = new AbPig();
 
+
+            // Calling interface
+            Dragon myDragon = new Dragon(); // Create a dragon object
+            myDragon.animalSound();
+            myDragon.breatheFire();
+
         }
 
         // Define Method
