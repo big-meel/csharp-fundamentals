@@ -278,6 +278,26 @@ namespace myApp
             string readText = File.ReadAllText("filename.txt");
             Console.WriteLine(readText);
 
+            // try..catch examples
+    
+
+            try
+            {
+                int[] someNumbers = {1, 2, 3};
+                Console.WriteLine(someNumbers[10]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally // executes code regardless of result
+            {
+                Console.WriteLine("Finished.");
+            }
+
+            // throw keyword method example
+            // checkAge(15);
+            checkAge(20);
 
         }
 
@@ -344,6 +364,20 @@ namespace myApp
             March
         }
 
+
+        // throw keyword example
+        static void checkAge(int userAge)
+        {
+            if (userAge < 18)
+            {
+                throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+            }
+            else
+            {
+                Console.WriteLine("Access granted - You are old enough!");
+            }
+
+        }
 
     }
 }
