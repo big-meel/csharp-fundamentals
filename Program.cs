@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq; // Contains helpful methods such as Min, Max, Sum
+using System.IO;
 
 /* Table of Contents:
 
@@ -270,6 +271,12 @@ namespace myApp
             Console.WriteLine(month);
             Console.WriteLine(monthOfTheYear);
 
+            // File system examples
+            string writeText = "Hello World!";
+            File.WriteAllText("filename.txt", writeText);
+
+            string readText = File.ReadAllText("filename.txt");
+            Console.WriteLine(readText);
 
 
         }
